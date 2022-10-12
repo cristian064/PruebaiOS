@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "git@github.com:cristian064/CoreNetwork.git",
       "state" : {
-        "revision" : "41662ce28ef2801aff36a274258b06245dda8968",
-        "version" : "1.0.2"
+        "branch" : "feature/req001",
+        "revision" : "f39f14ba753b21f80880c2c4c6563690ffbb70db"
       }
     },
     {

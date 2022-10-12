@@ -17,6 +17,15 @@
 		C67E6A3E28F672C3006FCC8E /* PruebaiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A3D28F672C3006FCC8E /* PruebaiOSUITests.swift */; };
 		C67E6A4028F672C3006FCC8E /* PruebaiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A3F28F672C3006FCC8E /* PruebaiOSUITestsLaunchTests.swift */; };
 		C67E6A4E28F674D6006FCC8E /* CoreNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = C67E6A4D28F674D6006FCC8E /* CoreNetwork */; };
+		C67E6A5128F6751D006FCC8E /* GoRestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A5028F6751D006FCC8E /* GoRestRepository.swift */; };
+		C67E6A5428F6755D006FCC8E /* ListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A5328F6755D006FCC8E /* ListEntity.swift */; };
+		C67E6A5828F67677006FCC8E /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A5728F67677006FCC8E /* ListRouter.swift */; };
+		C67E6A5B28F67696006FCC8E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A5A28F67696006FCC8E /* ListViewController.swift */; };
+		C67E6A5D28F676AA006FCC8E /* ListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A5C28F676AA006FCC8E /* ListCollectionViewCell.swift */; };
+		C67E6A6028F676C6006FCC8E /* ListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A5F28F676C6006FCC8E /* ListProtocols.swift */; };
+		C67E6A6328F676EC006FCC8E /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A6228F676EC006FCC8E /* ListInteractor.swift */; };
+		C67E6A6628F6770E006FCC8E /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A6528F6770E006FCC8E /* ListPresenter.swift */; };
+		C67E6A6928F67D06006FCC8E /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A6828F67D06006FCC8E /* ListModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +59,15 @@
 		C67E6A3928F672C3006FCC8E /* PruebaiOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PruebaiOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67E6A3D28F672C3006FCC8E /* PruebaiOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaiOSUITests.swift; sourceTree = "<group>"; };
 		C67E6A3F28F672C3006FCC8E /* PruebaiOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaiOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C67E6A5028F6751D006FCC8E /* GoRestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoRestRepository.swift; sourceTree = "<group>"; };
+		C67E6A5328F6755D006FCC8E /* ListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEntity.swift; sourceTree = "<group>"; };
+		C67E6A5728F67677006FCC8E /* ListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouter.swift; sourceTree = "<group>"; };
+		C67E6A5A28F67696006FCC8E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		C67E6A5C28F676AA006FCC8E /* ListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCollectionViewCell.swift; sourceTree = "<group>"; };
+		C67E6A5F28F676C6006FCC8E /* ListProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListProtocols.swift; sourceTree = "<group>"; };
+		C67E6A6228F676EC006FCC8E /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		C67E6A6528F6770E006FCC8E /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		C67E6A6828F67D06006FCC8E /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +119,10 @@
 		C67E6A1B28F672C1006FCC8E /* PruebaiOS */ = {
 			isa = PBXGroup;
 			children = (
+				C67E6A6728F67CFE006FCC8E /* Model */,
+				C67E6A5528F67661006FCC8E /* List */,
+				C67E6A5228F67554006FCC8E /* Entity */,
+				C67E6A4F28F6750B006FCC8E /* Repository */,
 				C67E6A1C28F672C1006FCC8E /* AppDelegate.swift */,
 				C67E6A1E28F672C1006FCC8E /* SceneDelegate.swift */,
 				C67E6A2028F672C1006FCC8E /* ViewController.swift */,
@@ -127,6 +149,83 @@
 				C67E6A3F28F672C3006FCC8E /* PruebaiOSUITestsLaunchTests.swift */,
 			);
 			path = PruebaiOSUITests;
+			sourceTree = "<group>";
+		};
+		C67E6A4F28F6750B006FCC8E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A5028F6751D006FCC8E /* GoRestRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		C67E6A5228F67554006FCC8E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A5328F6755D006FCC8E /* ListEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C67E6A5528F67661006FCC8E /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A6428F67700006FCC8E /* Presenter */,
+				C67E6A6128F676E1006FCC8E /* Interactor */,
+				C67E6A5E28F676BB006FCC8E /* Protocols */,
+				C67E6A5928F6768B006FCC8E /* View */,
+				C67E6A5628F6766B006FCC8E /* Router */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		C67E6A5628F6766B006FCC8E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A5728F67677006FCC8E /* ListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C67E6A5928F6768B006FCC8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A5A28F67696006FCC8E /* ListViewController.swift */,
+				C67E6A5C28F676AA006FCC8E /* ListCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C67E6A5E28F676BB006FCC8E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A5F28F676C6006FCC8E /* ListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C67E6A6128F676E1006FCC8E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A6228F676EC006FCC8E /* ListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C67E6A6428F67700006FCC8E /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A6528F6770E006FCC8E /* ListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C67E6A6728F67CFE006FCC8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A6828F67D06006FCC8E /* ListModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,9 +365,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C67E6A6328F676EC006FCC8E /* ListInteractor.swift in Sources */,
+				C67E6A5828F67677006FCC8E /* ListRouter.swift in Sources */,
+				C67E6A5428F6755D006FCC8E /* ListEntity.swift in Sources */,
+				C67E6A6928F67D06006FCC8E /* ListModel.swift in Sources */,
+				C67E6A5D28F676AA006FCC8E /* ListCollectionViewCell.swift in Sources */,
 				C67E6A2128F672C1006FCC8E /* ViewController.swift in Sources */,
+				C67E6A5128F6751D006FCC8E /* GoRestRepository.swift in Sources */,
 				C67E6A1D28F672C1006FCC8E /* AppDelegate.swift in Sources */,
 				C67E6A1F28F672C1006FCC8E /* SceneDelegate.swift in Sources */,
+				C67E6A6628F6770E006FCC8E /* ListPresenter.swift in Sources */,
+				C67E6A5B28F67696006FCC8E /* ListViewController.swift in Sources */,
+				C67E6A6028F676C6006FCC8E /* ListProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -616,8 +724,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:cristian064/CoreNetwork.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.2;
+				branch = feature/req001;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
