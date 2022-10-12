@@ -12,6 +12,7 @@
 		C65BA7A028F73171009297EE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA79F28F73171009297EE /* DetailViewController.swift */; };
 		C65BA7A328F731DA009297EE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7A228F731DA009297EE /* DetailPresenter.swift */; };
 		C65BA7A628F731ED009297EE /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7A528F731ED009297EE /* DetailProtocols.swift */; };
+		C65BA7A928F735E8009297EE /* ListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7A828F735E8009297EE /* ListPresenterTest.swift */; };
 		C678C09528F6FE3900515F2C /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C678C09428F6FE3900515F2C /* RequestModel.swift */; };
 		C678C09728F7000000515F2C /* Numeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C678C09628F7000000515F2C /* Numeric+Extensions.swift */; };
 		C678C09A28F72AF100515F2C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C678C09928F72AF100515F2C /* Localizable.strings */; };
@@ -66,6 +67,7 @@
 		C65BA79F28F73171009297EE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C65BA7A228F731DA009297EE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		C65BA7A528F731ED009297EE /* DetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
+		C65BA7A828F735E8009297EE /* ListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterTest.swift; sourceTree = "<group>"; };
 		C678C09428F6FE3900515F2C /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		C678C09628F7000000515F2C /* Numeric+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+Extensions.swift"; sourceTree = "<group>"; };
 		C678C09928F72AF100515F2C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -202,6 +204,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		C65BA7A728F735DA009297EE /* List */ = {
+			isa = PBXGroup;
+			children = (
+				C65BA7A828F735E8009297EE /* ListPresenterTest.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
 		C678C09828F72ABC00515F2C /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +264,7 @@
 		C67E6A3228F672C3006FCC8E /* PruebaiOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				C65BA7A728F735DA009297EE /* List */,
 				C67E6A3328F672C3006FCC8E /* PruebaiOSTests.swift */,
 			);
 			path = PruebaiOSTests;
@@ -516,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C65BA7A928F735E8009297EE /* ListPresenterTest.swift in Sources */,
 				C67E6A3428F672C3006FCC8E /* PruebaiOSTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
