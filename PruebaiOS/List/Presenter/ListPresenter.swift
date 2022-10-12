@@ -38,4 +38,8 @@ class ListPresenter: ListViewPresenterProtocol, ListInteractorPresenterProtocol 
         self.view?.loading(with: false)
         self.view?.didReceiveData()
     }
+    
+    func search(with title: String) {
+        
+    }
 }

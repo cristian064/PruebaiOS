@@ -11,6 +11,7 @@ import UIKit
 class ListViewController: UIViewController {
     let presenter: ListViewPresenterProtocol
     var refreshControl: UIRefreshControl = .init(frame: .zero)
+    var searchTimer : Timer?
     
     private let collectionView: UICollectionView = {
         // Cell
@@ -95,15 +96,15 @@ extension ListViewController: UICollectionViewDataSource {
 
 
 extension ListViewController: UISearchBarDelegate {
-    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        searchTimer?.invalidate()
+        self.searchTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: {[weak self] (_) in
+            self?.presenter.search(with: searchText)
+        })
+    }
 }
 
 extension ListViewController: ListPresenterViewProtocol {
-//    func didReceiveError() {
-//        let alerView = UIAlertController(title: "Error", message: "Something happen", preferredStyle: .alert)
-//        alerView.addAction(.init(title: "acept", style: .destructive))
-//        self.present(alerView, animated: false, completion: nil)
-//    }
     func didReceiveData() {
         self.collectionView.reloadData()
     }

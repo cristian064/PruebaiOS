@@ -12,10 +12,10 @@ protocol ListViewPresenterProtocol: AnyObject {
     var elements: [DataModel] {get}
     func viewDidLoad()
     func getData()
+    func search(with title: String)
 }
 
 protocol ListPresenterViewProtocol: AnyObject {
-//    func didReceiveError()
     func didReceiveData()
     func loading(with isLoading: Bool)
 }

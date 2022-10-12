@@ -8,7 +8,18 @@
 import Foundation
 import UIKit
 
-class ListRouter: ListPresenterRouterProtocol {
+class ListRouter: UINavigationController, ListPresenterRouterProtocol {
+    
+    init() {
+        super.init(nibName: nil, bundle: nil)
+        self.pushViewController(createModule(), animated: false)
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func createModule() -> UIViewController {
         let interactor = ListInteractor()
         let presenter = ListPresenter(router: self,
@@ -23,6 +34,6 @@ class ListRouter: ListPresenterRouterProtocol {
     func presentError() {
         let alerView = UIAlertController(title: "Error", message: "Something happen", preferredStyle: .alert)
         alerView.addAction(.init(title: "acept", style: .destructive))
-//        self.present(alerView, animated: false, completion: nil)
+        self.present(alerView, animated: false, completion: nil)
     }
 }
