@@ -43,7 +43,9 @@ class ListPresenter: ListViewPresenterProtocol, ListInteractorPresenterProtocol 
     }
     
     func search(with title: String) {
-        
+        interactor.requestData.text = title
+        interactor.requestData.pageNumber = 1
+        interactor.getData()
     }
     
     func willDisplay(indexPath: IndexPath) {
