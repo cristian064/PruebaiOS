@@ -9,17 +9,19 @@ import Foundation
 
 protocol ListViewPresenterProtocol: AnyObject {
     var title: String { get }
-    var elements: [String] {get}
+    var elements: [DataModel] {get}
     func viewDidLoad()
 }
 
 protocol ListPresenterViewProtocol: AnyObject {
 //    func didReceiveError()
+    func didReceiveData()
 }
 
 
 protocol ListInteractorPresenterProtocol: AnyObject {
     func didReceiveError()
+    func didReceiveData(dataModel: ListModel)
 }
 
 protocol ListPresenterInteractorProtocol: AnyObject {

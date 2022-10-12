@@ -16,7 +16,6 @@
 		C67E6A3428F672C3006FCC8E /* PruebaiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A3328F672C3006FCC8E /* PruebaiOSTests.swift */; };
 		C67E6A3E28F672C3006FCC8E /* PruebaiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A3D28F672C3006FCC8E /* PruebaiOSUITests.swift */; };
 		C67E6A4028F672C3006FCC8E /* PruebaiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A3F28F672C3006FCC8E /* PruebaiOSUITestsLaunchTests.swift */; };
-		C67E6A4E28F674D6006FCC8E /* CoreNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = C67E6A4D28F674D6006FCC8E /* CoreNetwork */; };
 		C67E6A5128F6751D006FCC8E /* GoRestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A5028F6751D006FCC8E /* GoRestRepository.swift */; };
 		C67E6A5428F6755D006FCC8E /* ListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A5328F6755D006FCC8E /* ListEntity.swift */; };
 		C67E6A5828F67677006FCC8E /* ListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A5728F67677006FCC8E /* ListRouter.swift */; };
@@ -26,6 +25,13 @@
 		C67E6A6328F676EC006FCC8E /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A6228F676EC006FCC8E /* ListInteractor.swift */; };
 		C67E6A6628F6770E006FCC8E /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A6528F6770E006FCC8E /* ListPresenter.swift */; };
 		C67E6A6928F67D06006FCC8E /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A6828F67D06006FCC8E /* ListModel.swift */; };
+		C67E6A6C28F681F0006FCC8E /* HttpVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A6B28F681F0006FCC8E /* HttpVerb.swift */; };
+		C67E6A6E28F68205006FCC8E /* RestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A6D28F68205006FCC8E /* RestAPI.swift */; };
+		C67E6A7128F68246006FCC8E /* ResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A7028F68246006FCC8E /* ResponseAPI.swift */; };
+		C67E6A7328F68272006FCC8E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A7228F68272006FCC8E /* NetworkError.swift */; };
+		C67E6A7528F682B4006FCC8E /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A7428F682B4006FCC8E /* SessionManager.swift */; };
+		C67E6A7728F682FF006FCC8E /* Extension+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A7628F682FF006FCC8E /* Extension+CollectionView.swift */; };
+		C67E6A7928F68369006FCC8E /* Extension+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A7828F68369006FCC8E /* Extension+Layout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +74,13 @@
 		C67E6A6228F676EC006FCC8E /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
 		C67E6A6528F6770E006FCC8E /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
 		C67E6A6828F67D06006FCC8E /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
+		C67E6A6B28F681F0006FCC8E /* HttpVerb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpVerb.swift; sourceTree = "<group>"; };
+		C67E6A6D28F68205006FCC8E /* RestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestAPI.swift; sourceTree = "<group>"; };
+		C67E6A7028F68246006FCC8E /* ResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseAPI.swift; sourceTree = "<group>"; };
+		C67E6A7228F68272006FCC8E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		C67E6A7428F682B4006FCC8E /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		C67E6A7628F682FF006FCC8E /* Extension+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CollectionView.swift"; sourceTree = "<group>"; };
+		C67E6A7828F68369006FCC8E /* Extension+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Layout.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +88,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C67E6A4E28F674D6006FCC8E /* CoreNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +131,7 @@
 		C67E6A1B28F672C1006FCC8E /* PruebaiOS */ = {
 			isa = PBXGroup;
 			children = (
+				C67E6A6A28F681C8006FCC8E /* Extensions */,
 				C67E6A6728F67CFE006FCC8E /* Model */,
 				C67E6A5528F67661006FCC8E /* List */,
 				C67E6A5228F67554006FCC8E /* Entity */,
@@ -154,6 +167,7 @@
 		C67E6A4F28F6750B006FCC8E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				C67E6A6F28F68231006FCC8E /* Base */,
 				C67E6A5028F6751D006FCC8E /* GoRestRepository.swift */,
 			);
 			path = Repository;
@@ -228,6 +242,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C67E6A6A28F681C8006FCC8E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A7628F682FF006FCC8E /* Extension+CollectionView.swift */,
+				C67E6A7828F68369006FCC8E /* Extension+Layout.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C67E6A6F28F68231006FCC8E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A6D28F68205006FCC8E /* RestAPI.swift */,
+				C67E6A6B28F681F0006FCC8E /* HttpVerb.swift */,
+				C67E6A7028F68246006FCC8E /* ResponseAPI.swift */,
+				C67E6A7228F68272006FCC8E /* NetworkError.swift */,
+				C67E6A7428F682B4006FCC8E /* SessionManager.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -245,7 +280,6 @@
 			);
 			name = PruebaiOS;
 			packageProductDependencies = (
-				C67E6A4D28F674D6006FCC8E /* CoreNetwork */,
 			);
 			productName = PruebaiOS;
 			productReference = C67E6A1928F672C1006FCC8E /* PruebaiOS.app */;
@@ -320,7 +354,6 @@
 			);
 			mainGroup = C67E6A1028F672C1006FCC8E;
 			packageReferences = (
-				C67E6A4C28F674D6006FCC8E /* XCRemoteSwiftPackageReference "CoreNetwork" */,
 			);
 			productRefGroup = C67E6A1A28F672C1006FCC8E /* Products */;
 			projectDirPath = "";
@@ -366,7 +399,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C67E6A6328F676EC006FCC8E /* ListInteractor.swift in Sources */,
+				C67E6A7328F68272006FCC8E /* NetworkError.swift in Sources */,
+				C67E6A6C28F681F0006FCC8E /* HttpVerb.swift in Sources */,
+				C67E6A6E28F68205006FCC8E /* RestAPI.swift in Sources */,
+				C67E6A7128F68246006FCC8E /* ResponseAPI.swift in Sources */,
 				C67E6A5828F67677006FCC8E /* ListRouter.swift in Sources */,
+				C67E6A7728F682FF006FCC8E /* Extension+CollectionView.swift in Sources */,
 				C67E6A5428F6755D006FCC8E /* ListEntity.swift in Sources */,
 				C67E6A6928F67D06006FCC8E /* ListModel.swift in Sources */,
 				C67E6A5D28F676AA006FCC8E /* ListCollectionViewCell.swift in Sources */,
@@ -377,6 +415,8 @@
 				C67E6A6628F6770E006FCC8E /* ListPresenter.swift in Sources */,
 				C67E6A5B28F67696006FCC8E /* ListViewController.swift in Sources */,
 				C67E6A6028F676C6006FCC8E /* ListProtocols.swift in Sources */,
+				C67E6A7928F68369006FCC8E /* Extension+Layout.swift in Sources */,
+				C67E6A7528F682B4006FCC8E /* SessionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,25 +758,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C67E6A4C28F674D6006FCC8E /* XCRemoteSwiftPackageReference "CoreNetwork" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "git@github.com:cristian064/CoreNetwork.git";
-			requirement = {
-				branch = feature/req001;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C67E6A4D28F674D6006FCC8E /* CoreNetwork */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C67E6A4C28F674D6006FCC8E /* XCRemoteSwiftPackageReference "CoreNetwork" */;
-			productName = CoreNetwork;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C67E6A1128F672C1006FCC8E /* Project object */;
 }

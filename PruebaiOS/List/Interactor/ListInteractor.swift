@@ -12,16 +12,25 @@ class ListInteractor: ListPresenterInteractorProtocol{
     weak var presenter: ListInteractorPresenterProtocol?
     func getData() {
         repository.getGoRestData {[weak self] response in
-//            switch response {
-//            case .success(let data):
-//                ()
-//            case .failure:
-//                self?.presenter?.didReceiveError()
-//            }
-            DispatchQueue.main.async {
+            guard let self = self else {
                 self?.presenter?.didReceiveError()
+                return
+            }
+            switch response {
+            case .success(let data):
+                let listModel = self.mapDataModel(data: data)
+                self.presenter?.didReceiveData(dataModel: listModel)
+            case .failure:
+                self.presenter?.didReceiveError()
             }
             
         }
+    }
+    func mapDataModel(data: ListEntity) -> ListModel {
+        let dataModel = data.data.map { dataEntity -> DataModel in
+            return .init(title: dataEntity.title, body: dataEntity.body)
+        }
+        
+        return .init(data: dataModel)
     }
 }

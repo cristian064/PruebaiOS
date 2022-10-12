@@ -12,7 +12,7 @@ class ListPresenter: ListViewPresenterProtocol, ListInteractorPresenterProtocol 
     weak var view: ListPresenterViewProtocol?
     var router: ListPresenterRouterProtocol
     var title: String = "Lista"
-    var elements: [String] = ["1", "2"]
+    var elements: [DataModel] = []
     
     init(router: ListPresenterRouterProtocol,
          interactor: ListPresenterInteractorProtocol) {
@@ -28,4 +28,8 @@ class ListPresenter: ListViewPresenterProtocol, ListInteractorPresenterProtocol 
         router.presentError()
     }
     
+    func didReceiveData(dataModel: ListModel) {
+        self.elements = dataModel.data
+        self.view?.didReceiveData()
+    }
 }

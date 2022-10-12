@@ -7,21 +7,20 @@
 
 import Foundation
 import UIKit
-import GenericUtilities
 
 class ListCollectionViewCell: UICollectionViewCell, ReuseIdentifier {
     
-    let titleLabel = UILabel()
-    var descriptionLabel: UILabel = {
+    var titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
         return label
     }()
     
-    lazy var stackView = UIStackView(arrangedSubviews: [
-        titleLabel,
-        descriptionLabel
-    ])
+    var data: DataModel! {
+        didSet {
+            titleLabel.text = data.title
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,13 +33,14 @@ class ListCollectionViewCell: UICollectionViewCell, ReuseIdentifier {
     }
     
     private func setupView() {
-        stackView.axis = .vertical
-        stackView.spacing = 8
-        contentView.addSubview(stackView)
+        self.contentView.layer.cornerRadius = 5
+        self.contentView.layer.borderWidth = 1
+        self.contentView.backgroundColor = .gray
+        contentView.addSubview(titleLabel)
     }
     
     private func setupConstraint() {
-        stackView.fillSuperview()
+        titleLabel.fillSuperview(padding: .init(top: 8, left: 8, bottom: 8, right: 8))
     }
 }
 

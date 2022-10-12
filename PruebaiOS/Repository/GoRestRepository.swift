@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import CoreNetwork
 
 protocol GoRestRepositoryProtocol: AnyObject {
     func getGoRestData(completion: @escaping (ResponseAPI<ListEntity>) -> Void)

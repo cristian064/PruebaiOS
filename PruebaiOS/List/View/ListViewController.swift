@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import GenericUtilities
 
 class ListViewController: UIViewController {
     let presenter: ListViewPresenterProtocol
@@ -82,7 +81,7 @@ extension ListViewController: UICollectionViewDataSource {
                                                             for: indexPath) as? ListCollectionViewCell else {
             return UICollectionViewCell()
         }
-        cell.contentView.backgroundColor = .red
+        cell.data = self.presenter.elements[indexPath.row]
         return cell
     }
     
@@ -99,4 +98,7 @@ extension ListViewController: ListPresenterViewProtocol {
 //        alerView.addAction(.init(title: "acept", style: .destructive))
 //        self.present(alerView, animated: false, completion: nil)
 //    }
+    func didReceiveData() {
+        self.collectionView.reloadData()
+    }
 }
