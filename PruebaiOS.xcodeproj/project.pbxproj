@@ -16,6 +16,7 @@
 		C67E6A3428F672C3006FCC8E /* PruebaiOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A3328F672C3006FCC8E /* PruebaiOSTests.swift */; };
 		C67E6A3E28F672C3006FCC8E /* PruebaiOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A3D28F672C3006FCC8E /* PruebaiOSUITests.swift */; };
 		C67E6A4028F672C3006FCC8E /* PruebaiOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A3F28F672C3006FCC8E /* PruebaiOSUITestsLaunchTests.swift */; };
+		C67E6A4E28F674D6006FCC8E /* CoreNetwork in Frameworks */ = {isa = PBXBuildFile; productRef = C67E6A4D28F674D6006FCC8E /* CoreNetwork */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C67E6A4E28F674D6006FCC8E /* CoreNetwork in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = PruebaiOS;
+			packageProductDependencies = (
+				C67E6A4D28F674D6006FCC8E /* CoreNetwork */,
+			);
 			productName = PruebaiOS;
 			productReference = C67E6A1928F672C1006FCC8E /* PruebaiOS.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = C67E6A1028F672C1006FCC8E;
+			packageReferences = (
+				C67E6A4C28F674D6006FCC8E /* XCRemoteSwiftPackageReference "CoreNetwork" */,
+			);
 			productRefGroup = C67E6A1A28F672C1006FCC8E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -602,6 +610,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C67E6A4C28F674D6006FCC8E /* XCRemoteSwiftPackageReference "CoreNetwork" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:cristian064/CoreNetwork.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C67E6A4D28F674D6006FCC8E /* CoreNetwork */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C67E6A4C28F674D6006FCC8E /* XCRemoteSwiftPackageReference "CoreNetwork" */;
+			productName = CoreNetwork;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C67E6A1128F672C1006FCC8E /* Project object */;
 }

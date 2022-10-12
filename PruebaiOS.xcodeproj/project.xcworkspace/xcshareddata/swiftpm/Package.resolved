@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "corenetwork",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:cristian064/CoreNetwork.git",
+      "state" : {
+        "revision" : "41662ce28ef2801aff36a274258b06245dda8968",
+        "version" : "1.0.2"
+      }
+    },
+    {
+      "identity" : "genericutilities",
+      "kind" : "remoteSourceControl",
+      "location" : "git@github.com:cristian064/GenericUtilities.git",
+      "state" : {
+        "revision" : "92dbb1708db42db02c6a019e5e9839c1fa1ef87d",
+        "version" : "1.0.5"
+      }
+    }
+  ],
+  "version" : 2
+}
