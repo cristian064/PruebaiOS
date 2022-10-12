@@ -14,6 +14,7 @@ protocol ListViewPresenterProtocol: AnyObject {
     func initialLoadData()
     func search(with title: String)
     func willDisplay(indexPath: IndexPath)
+    func didSelect(at index: Int)
 }
 
 protocol ListPresenterViewProtocol: AnyObject {
@@ -34,4 +35,5 @@ protocol ListPresenterInteractorProtocol: AnyObject {
 
 protocol ListPresenterRouterProtocol: AnyObject {
     func presentError()
+    func pushDetail(with data: DataModel)
 }

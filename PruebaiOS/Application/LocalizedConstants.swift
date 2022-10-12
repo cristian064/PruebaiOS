@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+enum Localized {
+    enum List {
+        static let title = NSLocalizedString("List", comment: .empty)
+    }
+    
+    enum Detail {
+        static let title = NSLocalizedString("Detail", comment: .empty)
+    }
+}

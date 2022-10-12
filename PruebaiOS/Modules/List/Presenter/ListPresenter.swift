@@ -11,7 +11,7 @@ class ListPresenter: ListViewPresenterProtocol, ListInteractorPresenterProtocol 
     var interactor: ListPresenterInteractorProtocol
     weak var view: ListPresenterViewProtocol?
     var router: ListPresenterRouterProtocol
-    var title: String = "Lista"
+    var title: String = Localized.List.title
     var elements: [DataModel] = []
     init(router: ListPresenterRouterProtocol,
          interactor: ListPresenterInteractorProtocol) {
@@ -65,5 +65,10 @@ class ListPresenter: ListViewPresenterProtocol, ListInteractorPresenterProtocol 
             interactor.requestData.pageNumber = pageNumber
             interactor.getData()
         }
+    }
+    
+    func didSelect(at index: Int) {
+        let dataModel = elements[index]
+        router.pushDetail(with: dataModel)
     }
 }

@@ -36,4 +36,9 @@ class ListRouter: UINavigationController, ListPresenterRouterProtocol {
         alerView.addAction(.init(title: "acept", style: .destructive))
         self.present(alerView, animated: false, completion: nil)
     }
+    
+    func pushDetail(with data: DataModel) {
+        let view = DetailRouter().create(dataModel: data)
+        pushViewController(view, animated: false)
+    }
 }

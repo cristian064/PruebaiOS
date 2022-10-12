@@ -68,6 +68,7 @@ class ListViewController: UIViewController {
     
     private func setupCollectionView() {
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.register(ListCollectionViewCell.self, forCellWithReuseIdentifier: ListCollectionViewCell.reuseIdentifier)
         collectionView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(update), for: .valueChanged)
@@ -78,7 +79,7 @@ class ListViewController: UIViewController {
     }
 }
 
-extension ListViewController: UICollectionViewDataSource {
+extension ListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return presenter.elements.count
     }
@@ -92,6 +93,9 @@ extension ListViewController: UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        presenter.didSelect(at: indexPath.row)
+    }
 }
 
 
