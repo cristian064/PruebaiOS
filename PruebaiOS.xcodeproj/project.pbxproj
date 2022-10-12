@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C65BA79728F72D6F009297EE /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA79628F72D6F009297EE /* DetailRouter.swift */; };
 		C678C09528F6FE3900515F2C /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C678C09428F6FE3900515F2C /* RequestModel.swift */; };
 		C678C09728F7000000515F2C /* Numeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C678C09628F7000000515F2C /* Numeric+Extensions.swift */; };
+		C678C09A28F72AF100515F2C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C678C09928F72AF100515F2C /* Localizable.strings */; };
+		C678C09C28F72B7600515F2C /* LocalizedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C678C09B28F72B7600515F2C /* LocalizedConstants.swift */; };
 		C67E6A1D28F672C1006FCC8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A1C28F672C1006FCC8E /* AppDelegate.swift */; };
 		C67E6A1F28F672C1006FCC8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A1E28F672C1006FCC8E /* SceneDelegate.swift */; };
 		C67E6A2128F672C1006FCC8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A2028F672C1006FCC8E /* ViewController.swift */; };
@@ -54,8 +57,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C65BA79628F72D6F009297EE /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		C678C09428F6FE3900515F2C /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		C678C09628F7000000515F2C /* Numeric+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+Extensions.swift"; sourceTree = "<group>"; };
+		C678C09928F72AF100515F2C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		C678C09B28F72B7600515F2C /* LocalizedConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedConstants.swift; sourceTree = "<group>"; };
 		C67E6A1928F672C1006FCC8E /* PruebaiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67E6A1C28F672C1006FCC8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C67E6A1E28F672C1006FCC8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +118,63 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C65BA79428F72D18009297EE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C65BA79528F72D5C009297EE /* Detail */,
+				C67E6A5528F67661006FCC8E /* List */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		C65BA79528F72D5C009297EE /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C65BA79628F72D6F009297EE /* DetailRouter.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		C65BA79828F72DA0009297EE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A5F28F676C6006FCC8E /* ListProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C65BA79928F72DA9009297EE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A6228F676EC006FCC8E /* ListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		C65BA79A28F72DB3009297EE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A6528F6770E006FCC8E /* ListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		C678C09828F72ABC00515F2C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				C67E6A1C28F672C1006FCC8E /* AppDelegate.swift */,
+				C67E6A1E28F672C1006FCC8E /* SceneDelegate.swift */,
+				C67E6A2028F672C1006FCC8E /* ViewController.swift */,
+				C67E6A2228F672C1006FCC8E /* Main.storyboard */,
+				C67E6A2528F672C2006FCC8E /* Assets.xcassets */,
+				C67E6A2728F672C2006FCC8E /* LaunchScreen.storyboard */,
+				C67E6A2A28F672C2006FCC8E /* Info.plist */,
+				C678C09928F72AF100515F2C /* Localizable.strings */,
+				C678C09B28F72B7600515F2C /* LocalizedConstants.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		C67E6A1028F672C1006FCC8E = {
 			isa = PBXGroup;
 			children = (
@@ -135,18 +198,12 @@
 		C67E6A1B28F672C1006FCC8E /* PruebaiOS */ = {
 			isa = PBXGroup;
 			children = (
+				C65BA79428F72D18009297EE /* Modules */,
+				C678C09828F72ABC00515F2C /* Application */,
 				C67E6A6A28F681C8006FCC8E /* Extensions */,
 				C67E6A6728F67CFE006FCC8E /* Model */,
-				C67E6A5528F67661006FCC8E /* List */,
 				C67E6A5228F67554006FCC8E /* Entity */,
 				C67E6A4F28F6750B006FCC8E /* Repository */,
-				C67E6A1C28F672C1006FCC8E /* AppDelegate.swift */,
-				C67E6A1E28F672C1006FCC8E /* SceneDelegate.swift */,
-				C67E6A2028F672C1006FCC8E /* ViewController.swift */,
-				C67E6A2228F672C1006FCC8E /* Main.storyboard */,
-				C67E6A2528F672C2006FCC8E /* Assets.xcassets */,
-				C67E6A2728F672C2006FCC8E /* LaunchScreen.storyboard */,
-				C67E6A2A28F672C2006FCC8E /* Info.plist */,
 			);
 			path = PruebaiOS;
 			sourceTree = "<group>";
@@ -188,9 +245,9 @@
 		C67E6A5528F67661006FCC8E /* List */ = {
 			isa = PBXGroup;
 			children = (
-				C67E6A6428F67700006FCC8E /* Presenter */,
-				C67E6A6128F676E1006FCC8E /* Interactor */,
-				C67E6A5E28F676BB006FCC8E /* Protocols */,
+				C65BA79A28F72DB3009297EE /* Presenter */,
+				C65BA79928F72DA9009297EE /* Interactor */,
+				C65BA79828F72DA0009297EE /* Protocols */,
 				C67E6A5928F6768B006FCC8E /* View */,
 				C67E6A5628F6766B006FCC8E /* Router */,
 			);
@@ -212,30 +269,6 @@
 				C67E6A5C28F676AA006FCC8E /* ListCollectionViewCell.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		C67E6A5E28F676BB006FCC8E /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				C67E6A5F28F676C6006FCC8E /* ListProtocols.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		C67E6A6128F676E1006FCC8E /* Interactor */ = {
-			isa = PBXGroup;
-			children = (
-				C67E6A6228F676EC006FCC8E /* ListInteractor.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		C67E6A6428F67700006FCC8E /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				C67E6A6528F6770E006FCC8E /* ListPresenter.swift */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		C67E6A6728F67CFE006FCC8E /* Model */ = {
@@ -378,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C67E6A2928F672C2006FCC8E /* LaunchScreen.storyboard in Resources */,
+				C678C09A28F72AF100515F2C /* Localizable.strings in Resources */,
 				C67E6A2628F672C2006FCC8E /* Assets.xcassets in Resources */,
 				C67E6A2428F672C1006FCC8E /* Main.storyboard in Resources */,
 			);
@@ -405,6 +439,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C67E6A6328F676EC006FCC8E /* ListInteractor.swift in Sources */,
+				C678C09C28F72B7600515F2C /* LocalizedConstants.swift in Sources */,
 				C67E6A7328F68272006FCC8E /* NetworkError.swift in Sources */,
 				C67E6A6C28F681F0006FCC8E /* HttpVerb.swift in Sources */,
 				C67E6A6E28F68205006FCC8E /* RestAPI.swift in Sources */,
@@ -416,6 +451,7 @@
 				C67E6A5D28F676AA006FCC8E /* ListCollectionViewCell.swift in Sources */,
 				C67E6A2128F672C1006FCC8E /* ViewController.swift in Sources */,
 				C67E6A5128F6751D006FCC8E /* GoRestRepository.swift in Sources */,
+				C65BA79728F72D6F009297EE /* DetailRouter.swift in Sources */,
 				C67E6A1D28F672C1006FCC8E /* AppDelegate.swift in Sources */,
 				C67E6A1F28F672C1006FCC8E /* SceneDelegate.swift in Sources */,
 				C67E6A6628F6770E006FCC8E /* ListPresenter.swift in Sources */,
@@ -603,7 +639,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H3H95D45CM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PruebaiOS/Info.plist;
+				INFOPLIST_FILE = PruebaiOS/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -631,7 +667,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = H3H95D45CM;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PruebaiOS/Info.plist;
+				INFOPLIST_FILE = PruebaiOS/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
