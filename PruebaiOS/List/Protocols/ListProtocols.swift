@@ -11,11 +11,13 @@ protocol ListViewPresenterProtocol: AnyObject {
     var title: String { get }
     var elements: [DataModel] {get}
     func viewDidLoad()
+    func getData()
 }
 
 protocol ListPresenterViewProtocol: AnyObject {
 //    func didReceiveError()
     func didReceiveData()
+    func loading(with isLoading: Bool)
 }
 
 

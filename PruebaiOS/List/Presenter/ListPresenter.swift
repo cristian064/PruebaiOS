@@ -21,15 +21,21 @@ class ListPresenter: ListViewPresenterProtocol, ListInteractorPresenterProtocol 
     }
     
     func viewDidLoad() {
+        getData()
+    }
+    
+    func getData() {
         interactor.getData()
     }
     
     func didReceiveError() {
+        self.view?.loading(with: false)
         router.presentError()
     }
     
     func didReceiveData(dataModel: ListModel) {
         self.elements = dataModel.data
+        self.view?.loading(with: false)
         self.view?.didReceiveData()
     }
 }

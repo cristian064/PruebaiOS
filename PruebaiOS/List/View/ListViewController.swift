@@ -10,6 +10,7 @@ import UIKit
 
 class ListViewController: UIViewController {
     let presenter: ListViewPresenterProtocol
+    var refreshControl: UIRefreshControl = .init(frame: .zero)
     
     private let collectionView: UICollectionView = {
         // Cell
@@ -50,7 +51,6 @@ class ListViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(collectionView)
         title = presenter.title
-//        collectionView.dataSource = self
     }
     
     private func setupConstraints() {
@@ -68,6 +68,12 @@ class ListViewController: UIViewController {
     private func setupCollectionView() {
         collectionView.dataSource = self
         collectionView.register(ListCollectionViewCell.self, forCellWithReuseIdentifier: ListCollectionViewCell.reuseIdentifier)
+        collectionView.refreshControl = refreshControl
+        refreshControl.addTarget(self, action: #selector(update), for: .valueChanged)
+    }
+    @objc func update() {
+//        callWebServices()
+        presenter.getData()
     }
 }
 
@@ -100,5 +106,10 @@ extension ListViewController: ListPresenterViewProtocol {
 //    }
     func didReceiveData() {
         self.collectionView.reloadData()
+    }
+    func loading(with isLoading: Bool) {
+        if !isLoading {
+            self.refreshControl.endRefreshing()
+        }
     }
 }
