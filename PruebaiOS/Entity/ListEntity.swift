@@ -23,10 +23,18 @@ struct ListEntity: Decodable {
 }
 
 struct PaginationEntity: Decodable {
-    let page: Int
-    let pages: Int
-    let total: Int
-    let limit: Int
+//    let page: Int
+//    let pages: Int
+//    let total: Int
+//    let limit: Int
+    
+    var pageNumber: Int
+    var pageSize: Int
+    var totalPage: Int
+    
+    private enum CodingKeys : String, CodingKey {
+        case pageNumber = "page", pageSize = "limit", totalPage = "pages"
+    }
 }
 
 struct DataEntity: Decodable {

@@ -13,7 +13,6 @@ class ListPresenter: ListViewPresenterProtocol, ListInteractorPresenterProtocol 
     var router: ListPresenterRouterProtocol
     var title: String = "Lista"
     var elements: [DataModel] = []
-    
     init(router: ListPresenterRouterProtocol,
          interactor: ListPresenterInteractorProtocol) {
         self.router = router
@@ -21,7 +20,7 @@ class ListPresenter: ListViewPresenterProtocol, ListInteractorPresenterProtocol 
     }
     
     func viewDidLoad() {
-        getData()
+        initialLoadData()
     }
     
     func getData() {
@@ -34,12 +33,35 @@ class ListPresenter: ListViewPresenterProtocol, ListInteractorPresenterProtocol 
     }
     
     func didReceiveData(dataModel: ListModel) {
-        self.elements = dataModel.data
+        if dataModel.pagination.pageNumber == 1 {
+            self.elements = dataModel.data
+        } else {
+            self.elements.append(contentsOf: dataModel.data)
+        }
         self.view?.loading(with: false)
         self.view?.didReceiveData()
     }
     
     func search(with title: String) {
         
+    }
+    
+    func willDisplay(indexPath: IndexPath) {
+        if elements.count.decrement() <= indexPath.row {
+            loadMoreData()
+        }
+    }
+    
+    func initialLoadData() {
+        interactor.requestData.pageNumber = 1
+        interactor.getData()
+    }
+    
+    func loadMoreData() {
+        let pageNumber = (elements.count / interactor.requestData.pageSize).increment()
+        if pageNumber <= interactor.requestData.totalPage {
+            interactor.requestData.pageNumber = pageNumber
+            interactor.getData()
+        }
     }
 }

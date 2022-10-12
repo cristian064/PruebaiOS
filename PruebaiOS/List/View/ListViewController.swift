@@ -71,10 +71,10 @@ class ListViewController: UIViewController {
         collectionView.register(ListCollectionViewCell.self, forCellWithReuseIdentifier: ListCollectionViewCell.reuseIdentifier)
         collectionView.refreshControl = refreshControl
         refreshControl.addTarget(self, action: #selector(update), for: .valueChanged)
+        collectionView.prefetchDataSource = self
     }
     @objc func update() {
-//        callWebServices()
-        presenter.getData()
+        presenter.initialLoadData()
     }
 }
 
@@ -101,6 +101,14 @@ extension ListViewController: UISearchBarDelegate {
         self.searchTimer = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: {[weak self] (_) in
             self?.presenter.search(with: searchText)
         })
+    }
+}
+
+extension ListViewController: UICollectionViewDataSourcePrefetching {
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        let indexPathsSorted = indexPaths.sorted(by: {$0.row > $1.row})
+        guard let first = indexPathsSorted.first else { return}
+        presenter.willDisplay(indexPath: first)
     }
 }
 

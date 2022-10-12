@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C678C09528F6FE3900515F2C /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C678C09428F6FE3900515F2C /* RequestModel.swift */; };
+		C678C09728F7000000515F2C /* Numeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C678C09628F7000000515F2C /* Numeric+Extensions.swift */; };
 		C67E6A1D28F672C1006FCC8E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A1C28F672C1006FCC8E /* AppDelegate.swift */; };
 		C67E6A1F28F672C1006FCC8E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A1E28F672C1006FCC8E /* SceneDelegate.swift */; };
 		C67E6A2128F672C1006FCC8E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A2028F672C1006FCC8E /* ViewController.swift */; };
@@ -30,8 +32,8 @@
 		C67E6A7128F68246006FCC8E /* ResponseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A7028F68246006FCC8E /* ResponseAPI.swift */; };
 		C67E6A7328F68272006FCC8E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A7228F68272006FCC8E /* NetworkError.swift */; };
 		C67E6A7528F682B4006FCC8E /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A7428F682B4006FCC8E /* SessionManager.swift */; };
-		C67E6A7728F682FF006FCC8E /* Extension+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A7628F682FF006FCC8E /* Extension+CollectionView.swift */; };
-		C67E6A7928F68369006FCC8E /* Extension+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A7828F68369006FCC8E /* Extension+Layout.swift */; };
+		C67E6A7728F682FF006FCC8E /* CollectionView+ Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A7628F682FF006FCC8E /* CollectionView+ Extension.swift */; };
+		C67E6A7928F68369006FCC8E /* Layout+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67E6A7828F68369006FCC8E /* Layout+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C678C09428F6FE3900515F2C /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
+		C678C09628F7000000515F2C /* Numeric+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+Extensions.swift"; sourceTree = "<group>"; };
 		C67E6A1928F672C1006FCC8E /* PruebaiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C67E6A1C28F672C1006FCC8E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C67E6A1E28F672C1006FCC8E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,8 +83,8 @@
 		C67E6A7028F68246006FCC8E /* ResponseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseAPI.swift; sourceTree = "<group>"; };
 		C67E6A7228F68272006FCC8E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		C67E6A7428F682B4006FCC8E /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		C67E6A7628F682FF006FCC8E /* Extension+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+CollectionView.swift"; sourceTree = "<group>"; };
-		C67E6A7828F68369006FCC8E /* Extension+Layout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Layout.swift"; sourceTree = "<group>"; };
+		C67E6A7628F682FF006FCC8E /* CollectionView+ Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CollectionView+ Extension.swift"; sourceTree = "<group>"; };
+		C67E6A7828F68369006FCC8E /* Layout+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Layout+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				C67E6A6828F67D06006FCC8E /* ListModel.swift */,
+				C678C09428F6FE3900515F2C /* RequestModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -245,8 +250,9 @@
 		C67E6A6A28F681C8006FCC8E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C67E6A7628F682FF006FCC8E /* Extension+CollectionView.swift */,
-				C67E6A7828F68369006FCC8E /* Extension+Layout.swift */,
+				C67E6A7628F682FF006FCC8E /* CollectionView+ Extension.swift */,
+				C67E6A7828F68369006FCC8E /* Layout+Extension.swift */,
+				C678C09628F7000000515F2C /* Numeric+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -404,7 +410,7 @@
 				C67E6A6E28F68205006FCC8E /* RestAPI.swift in Sources */,
 				C67E6A7128F68246006FCC8E /* ResponseAPI.swift in Sources */,
 				C67E6A5828F67677006FCC8E /* ListRouter.swift in Sources */,
-				C67E6A7728F682FF006FCC8E /* Extension+CollectionView.swift in Sources */,
+				C67E6A7728F682FF006FCC8E /* CollectionView+ Extension.swift in Sources */,
 				C67E6A5428F6755D006FCC8E /* ListEntity.swift in Sources */,
 				C67E6A6928F67D06006FCC8E /* ListModel.swift in Sources */,
 				C67E6A5D28F676AA006FCC8E /* ListCollectionViewCell.swift in Sources */,
@@ -413,10 +419,12 @@
 				C67E6A1D28F672C1006FCC8E /* AppDelegate.swift in Sources */,
 				C67E6A1F28F672C1006FCC8E /* SceneDelegate.swift in Sources */,
 				C67E6A6628F6770E006FCC8E /* ListPresenter.swift in Sources */,
+				C678C09528F6FE3900515F2C /* RequestModel.swift in Sources */,
 				C67E6A5B28F67696006FCC8E /* ListViewController.swift in Sources */,
 				C67E6A6028F676C6006FCC8E /* ListProtocols.swift in Sources */,
-				C67E6A7928F68369006FCC8E /* Extension+Layout.swift in Sources */,
+				C67E6A7928F68369006FCC8E /* Layout+Extension.swift in Sources */,
 				C67E6A7528F682B4006FCC8E /* SessionManager.swift in Sources */,
+				C678C09728F7000000515F2C /* Numeric+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,8 +11,9 @@ protocol ListViewPresenterProtocol: AnyObject {
     var title: String { get }
     var elements: [DataModel] {get}
     func viewDidLoad()
-    func getData()
+    func initialLoadData()
     func search(with title: String)
+    func willDisplay(indexPath: IndexPath)
 }
 
 protocol ListPresenterViewProtocol: AnyObject {
@@ -28,6 +29,7 @@ protocol ListInteractorPresenterProtocol: AnyObject {
 
 protocol ListPresenterInteractorProtocol: AnyObject {
     func getData()
+    var requestData: RequestModel {get set}
 }
 
 protocol ListPresenterRouterProtocol: AnyObject {

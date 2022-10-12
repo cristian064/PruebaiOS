@@ -9,7 +9,7 @@ import Foundation
 
 struct ListModel {
     let data: [DataModel]
-
+    let pagination: PaginationModel
 }
 
 struct DataModel {
@@ -18,8 +18,12 @@ struct DataModel {
 }
 
 struct PaginationModel {
-    
+    var pageNumber: Int
+    var pageSize: Int
+    var totalPage: Int
 }
+
+
 
 //struct Pagination: Decodable {
 //    let page: Int
