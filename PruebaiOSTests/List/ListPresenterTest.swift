@@ -32,7 +32,7 @@ class ListPresenterTest: XCTestCase {
         super.tearDown()
     }
     
-    func test_didSelect() {
+    func test_didSelectData() {
         sut.elements = [.init(title: "test", body: "one body"),
                         .init(title: "test 2", body: "two body")]
         
@@ -73,7 +73,7 @@ class ListPresenterTest: XCTestCase {
         XCTAssertEqual(listInteractorMock.requestData.text, "test")
     }
     
-    func test_didReceiveData() {
+    func test_paginationMoreData() {
         let listModel = ListModel(data: [.init(title: "test", body: "one body"),
                                          .init(title: "test 2", body: "two body")],
                                   pagination: .init(pageNumber: 2, pageSize: 2, totalPage: 4))
@@ -82,6 +82,17 @@ class ListPresenterTest: XCTestCase {
         sut.didReceiveData(dataModel: listModel)
         
         XCTAssertEqual(sut.elements.count, 4)
+        XCTAssertEqual(sut.requestData.pageNumber, 2)
         
+    }
+    
+    func test_didReceiveDataFirstPage() {
+        let listModel = ListModel(data: [.init(title: "test", body: "one body"),
+                                         .init(title: "test 2", body: "two body")],
+                                  pagination: .init(pageNumber: 1, pageSize: 2, totalPage: 4))
+        
+        sut.didReceiveData(dataModel: listModel)
+        XCTAssertEqual(sut.elements.count, 2)
+        XCTAssertEqual(sut.requestData.pageNumber, 1)
     }
 }

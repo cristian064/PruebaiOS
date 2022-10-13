@@ -19,6 +19,7 @@
 		C65BA7B428F7A3AE009297EE /* ListPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7B328F7A3AE009297EE /* ListPresenterMock.swift */; };
 		C65BA7B628F7A47B009297EE /* RepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7B528F7A47B009297EE /* RepositoryMock.swift */; };
 		C65BA7B928F7ABEC009297EE /* ListInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7B828F7ABEC009297EE /* ListInteractorMock.swift */; };
+		C671C22628F879BD005C0EF0 /* ListRouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C671C22528F879BD005C0EF0 /* ListRouterTest.swift */; };
 		C678C09528F6FE3900515F2C /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C678C09428F6FE3900515F2C /* RequestModel.swift */; };
 		C678C09728F7000000515F2C /* Numeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C678C09628F7000000515F2C /* Numeric+Extensions.swift */; };
 		C678C09A28F72AF100515F2C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C678C09928F72AF100515F2C /* Localizable.strings */; };
@@ -70,6 +71,7 @@
 		C65BA7B328F7A3AE009297EE /* ListPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterMock.swift; sourceTree = "<group>"; };
 		C65BA7B528F7A47B009297EE /* RepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMock.swift; sourceTree = "<group>"; };
 		C65BA7B828F7ABEC009297EE /* ListInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorMock.swift; sourceTree = "<group>"; };
+		C671C22528F879BD005C0EF0 /* ListRouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterTest.swift; sourceTree = "<group>"; };
 		C678C09428F6FE3900515F2C /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		C678C09628F7000000515F2C /* Numeric+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+Extensions.swift"; sourceTree = "<group>"; };
 		C678C09928F72AF100515F2C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				C65BA7AA28F75136009297EE /* Mock */,
 				C65BA7A828F735E8009297EE /* ListPresenterTest.swift */,
 				C65BA7B128F7A30A009297EE /* ListInteractorTest.swift */,
+				C671C22528F879BD005C0EF0 /* ListRouterTest.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 				C65BA7B428F7A3AE009297EE /* ListPresenterMock.swift in Sources */,
 				C65BA7B928F7ABEC009297EE /* ListInteractorMock.swift in Sources */,
 				C65BA7B228F7A30A009297EE /* ListInteractorTest.swift in Sources */,
+				C671C22628F879BD005C0EF0 /* ListRouterTest.swift in Sources */,
 				C65BA7B628F7A47B009297EE /* RepositoryMock.swift in Sources */,
 				C65BA7B028F7525C009297EE /* ListViewMock.swift in Sources */,
 				C65BA7AE28F751F5009297EE /* ListRouterMock.swift in Sources */,
