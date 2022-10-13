@@ -13,9 +13,12 @@
 		C65BA7A328F731DA009297EE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7A228F731DA009297EE /* DetailPresenter.swift */; };
 		C65BA7A628F731ED009297EE /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7A528F731ED009297EE /* DetailProtocols.swift */; };
 		C65BA7A928F735E8009297EE /* ListPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7A828F735E8009297EE /* ListPresenterTest.swift */; };
-		C65BA7AC28F7514A009297EE /* ListPresenterInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7AB28F7514A009297EE /* ListPresenterInteractorMock.swift */; };
-		C65BA7AE28F751F5009297EE /* ListPresenterRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7AD28F751F5009297EE /* ListPresenterRouterMock.swift */; };
-		C65BA7B028F7525C009297EE /* ListPresenterViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7AF28F7525C009297EE /* ListPresenterViewMock.swift */; };
+		C65BA7AE28F751F5009297EE /* ListRouterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7AD28F751F5009297EE /* ListRouterMock.swift */; };
+		C65BA7B028F7525C009297EE /* ListViewMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7AF28F7525C009297EE /* ListViewMock.swift */; };
+		C65BA7B228F7A30A009297EE /* ListInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7B128F7A30A009297EE /* ListInteractorTest.swift */; };
+		C65BA7B428F7A3AE009297EE /* ListPresenterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7B328F7A3AE009297EE /* ListPresenterMock.swift */; };
+		C65BA7B628F7A47B009297EE /* RepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7B528F7A47B009297EE /* RepositoryMock.swift */; };
+		C65BA7B928F7ABEC009297EE /* ListInteractorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65BA7B828F7ABEC009297EE /* ListInteractorMock.swift */; };
 		C678C09528F6FE3900515F2C /* RequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C678C09428F6FE3900515F2C /* RequestModel.swift */; };
 		C678C09728F7000000515F2C /* Numeric+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C678C09628F7000000515F2C /* Numeric+Extensions.swift */; };
 		C678C09A28F72AF100515F2C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C678C09928F72AF100515F2C /* Localizable.strings */; };
@@ -61,9 +64,12 @@
 		C65BA7A228F731DA009297EE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		C65BA7A528F731ED009297EE /* DetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
 		C65BA7A828F735E8009297EE /* ListPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterTest.swift; sourceTree = "<group>"; };
-		C65BA7AB28F7514A009297EE /* ListPresenterInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterInteractorMock.swift; sourceTree = "<group>"; };
-		C65BA7AD28F751F5009297EE /* ListPresenterRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterRouterMock.swift; sourceTree = "<group>"; };
-		C65BA7AF28F7525C009297EE /* ListPresenterViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterViewMock.swift; sourceTree = "<group>"; };
+		C65BA7AD28F751F5009297EE /* ListRouterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRouterMock.swift; sourceTree = "<group>"; };
+		C65BA7AF28F7525C009297EE /* ListViewMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewMock.swift; sourceTree = "<group>"; };
+		C65BA7B128F7A30A009297EE /* ListInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorTest.swift; sourceTree = "<group>"; };
+		C65BA7B328F7A3AE009297EE /* ListPresenterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenterMock.swift; sourceTree = "<group>"; };
+		C65BA7B528F7A47B009297EE /* RepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryMock.swift; sourceTree = "<group>"; };
+		C65BA7B828F7ABEC009297EE /* ListInteractorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorMock.swift; sourceTree = "<group>"; };
 		C678C09428F6FE3900515F2C /* RequestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestModel.swift; sourceTree = "<group>"; };
 		C678C09628F7000000515F2C /* Numeric+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Numeric+Extensions.swift"; sourceTree = "<group>"; };
 		C678C09928F72AF100515F2C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -194,6 +200,7 @@
 			children = (
 				C65BA7AA28F75136009297EE /* Mock */,
 				C65BA7A828F735E8009297EE /* ListPresenterTest.swift */,
+				C65BA7B128F7A30A009297EE /* ListInteractorTest.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -201,9 +208,11 @@
 		C65BA7AA28F75136009297EE /* Mock */ = {
 			isa = PBXGroup;
 			children = (
-				C65BA7AB28F7514A009297EE /* ListPresenterInteractorMock.swift */,
-				C65BA7AD28F751F5009297EE /* ListPresenterRouterMock.swift */,
-				C65BA7AF28F7525C009297EE /* ListPresenterViewMock.swift */,
+				C65BA7AD28F751F5009297EE /* ListRouterMock.swift */,
+				C65BA7AF28F7525C009297EE /* ListViewMock.swift */,
+				C65BA7B328F7A3AE009297EE /* ListPresenterMock.swift */,
+				C65BA7B528F7A47B009297EE /* RepositoryMock.swift */,
+				C65BA7B828F7ABEC009297EE /* ListInteractorMock.swift */,
 			);
 			path = Mock;
 			sourceTree = "<group>";
@@ -482,9 +491,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C65BA7A928F735E8009297EE /* ListPresenterTest.swift in Sources */,
-				C65BA7AC28F7514A009297EE /* ListPresenterInteractorMock.swift in Sources */,
-				C65BA7B028F7525C009297EE /* ListPresenterViewMock.swift in Sources */,
-				C65BA7AE28F751F5009297EE /* ListPresenterRouterMock.swift in Sources */,
+				C65BA7B428F7A3AE009297EE /* ListPresenterMock.swift in Sources */,
+				C65BA7B928F7ABEC009297EE /* ListInteractorMock.swift in Sources */,
+				C65BA7B228F7A30A009297EE /* ListInteractorTest.swift in Sources */,
+				C65BA7B628F7A47B009297EE /* RepositoryMock.swift in Sources */,
+				C65BA7B028F7525C009297EE /* ListViewMock.swift in Sources */,
+				C65BA7AE28F751F5009297EE /* ListRouterMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

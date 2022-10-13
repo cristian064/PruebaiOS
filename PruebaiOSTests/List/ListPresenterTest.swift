@@ -5,59 +5,83 @@
 //  Created by Cristian Ayala on 12/10/22.
 //
 
-import Foundation
-
 import XCTest
 @testable import PruebaiOS
 
 class ListPresenterTest: XCTestCase {
     
-//    var listPresenter: ListPresenter!
-//    var listPresenterInteractorMock: ListPresenterInteractorMock!
-//    var listPresenterViewMock: ListPresenterViewProtocol!
-//    var listPresenterRouterMock: ListPresenterRouterProtocol!
+    var sut: ListPresenter!
+    var listInteractorMock: ListInteractorMock!
+    var listRouterMock: ListRouterMock!
+    var listViewMock: ListViewMock!
     override func setUp() {
         super.setUp()
-//        listPresenterInteractorMock = ListPresenterInteractorMock()
-//        listPresenterRouterMock = ListPresenterRouterMock()
-//        listPresenterViewMock = ListPresenterViewMock()
-//        listPresenter = .init(router: listPresenterRouterMock,
-//                              interactor: listPresenterInteractorMock)
-//        listPresenterInteractorMock.presenter = listPresenter
-//        listPresenter.view = listPresenterViewMock
+        listRouterMock = .init()
+        listInteractorMock = .init()
+        listViewMock = .init()
+        sut = .init(router: listRouterMock,
+                              interactor: listInteractorMock)
+        sut.view = listViewMock
     }
     
     override func tearDown() {
-//        listPresenterInteractorMock = nil
-//        listPresenterRouterMock = nil
-//        listPresenterViewMock = nil
-//        listPresenter = nil
+        listRouterMock = nil
+        listInteractorMock = nil
+        listViewMock = nil
+        sut = nil
         super.tearDown()
     }
     
-//    func test_initialLoadData() {
-//        listPresenter.initialLoadData()
-//        XCTAssertEqual(listPresenterInteractorMock.requestData.pageNumber, 1)
-//        XCTAssertEqual(listPresenter.elements.count, 1)
-//    }
-//    
-//    func test_searchText() {
-//        listPresenter.search(with: "test")
-//        XCTAssertEqual(listPresenterInteractorMock.requestData.text, "test")
-//        XCTAssertEqual(listPresenterInteractorMock.requestData.pageNumber, 1)
-//    }
-//    
-//    func test_didReceiveData() {
-//        let title = "Doloribus sum provident illo carcer advoco somniculosus voluntarius turba vindico."
-//        let body = "Mollitia aer distinctio. Advoco accusantium decet. Theologus succedo error. Voluptatem abstergo inventore."
-//        let element: [DataModel] = [.init(title: title, body: body)]
-//        listPresenter.elements = element
-//        let listModel = ListModel(data: element, pagination: .init(pageNumber: 2, pageSize: 1, totalPage: 3))
-//        listPresenter.didReceiveData(dataModel: listModel)
-//        XCTAssertEqual(listPresenter.elements.count, 2)
-//    }
-//    
-//    func test_loadMoreData() {
-//        
-//    }
+    func test_didSelect() {
+        sut.elements = [.init(title: "test", body: "one body"),
+                        .init(title: "test 2", body: "two body")]
+        
+        sut.didSelect(at: 0)
+        XCTAssertEqual(listRouterMock.data.title, sut.elements[0].title)
+        XCTAssertEqual(listRouterMock.data.body, sut.elements[0].body)
+    }
+    
+    func test_didReceiveError() {
+        sut.didReceiveError()
+        XCTAssertTrue(listRouterMock.isPresentError)
+    }
+    
+    func test_getData() {
+        sut.getData()
+        XCTAssertEqual(sut.requestData.pageNumber, 1)
+        XCTAssertEqual(sut.requestData.pageSize, 10)
+    }
+    
+    func test_loadMoreData() {
+        sut.requestData = .init(pageNumber: 2, pageSize: 10, totalPage: 4, text: .empty)
+        sut.loadMoreData()
+        XCTAssertEqual(listInteractorMock.requestData.pageNumber, 3)
+        XCTAssertEqual(listInteractorMock.requestData.totalPage, 4)
+    }
+    
+    func test_willDisplay() {
+        sut.elements = [.init(title: "test", body: "one body"),
+                        .init(title: "test 2", body: "two body")]
+        sut.requestData = .init(pageNumber: 1, pageSize: 2, totalPage: 4, text: .empty)
+        sut.willDisplay(indexPath: .init(row: 2, section: 0))
+        XCTAssertEqual(listInteractorMock.requestData.pageNumber, 2)
+    }
+    
+    func test_search() {
+        sut.search(with: "test")
+        sut.requestData = .init(pageNumber: 1, pageSize: 2, totalPage: 4, text: .empty)
+        XCTAssertEqual(listInteractorMock.requestData.text, "test")
+    }
+    
+    func test_didReceiveData() {
+        let listModel = ListModel(data: [.init(title: "test", body: "one body"),
+                                         .init(title: "test 2", body: "two body")],
+                                  pagination: .init(pageNumber: 2, pageSize: 2, totalPage: 4))
+        sut.elements = [.init(title: "test 0", body: "one body"),
+                        .init(title: "test 1", body: "two body")]
+        sut.didReceiveData(dataModel: listModel)
+        
+        XCTAssertEqual(sut.elements.count, 4)
+        
+    }
 }

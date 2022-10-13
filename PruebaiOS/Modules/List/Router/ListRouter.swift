@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ListRouter: UINavigationController, ListPresenterRouterProtocol {
+class ListRouter: UINavigationController, ListRouterProtocol {
     
     init() {
         super.init(nibName: nil, bundle: nil)

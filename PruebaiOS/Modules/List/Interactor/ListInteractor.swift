@@ -8,7 +8,7 @@
 import Foundation
 
 class ListInteractor: ListInteractorProtocol{
-    let repository: GoRestRepositoryProtocol = GoRestRepository()
+    var repository: GoRestRepositoryProtocol = GoRestRepository()
     weak var presenter: ListPresenterProtocol?
     
     var isLoadingMoreData: Bool = false

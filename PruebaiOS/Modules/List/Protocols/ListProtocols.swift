@@ -30,7 +30,7 @@ protocol ListInteractorProtocol: AnyObject {
     func getData(requestData: RequestModel)
 }
 
-protocol ListPresenterRouterProtocol: AnyObject {
+protocol ListRouterProtocol: AnyObject {
     func presentError()
     func pushDetail(with data: DataModel)
 }

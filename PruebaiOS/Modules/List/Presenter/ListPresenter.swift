@@ -10,11 +10,11 @@ import Foundation
 class ListPresenter: ListPresenterProtocol {
     var interactor: ListInteractorProtocol
     weak var view: ListViewProtocol?
-    var router: ListPresenterRouterProtocol
+    var router: ListRouterProtocol
     var title: String = Localized.List.title
     var elements: [DataModel] = []
     var requestData = RequestModel(pageNumber: 1, pageSize: 10, totalPage: 1, text: .empty)
-    init(router: ListPresenterRouterProtocol,
+    init(router: ListRouterProtocol,
          interactor: ListInteractorProtocol) {
         self.router = router
         self.interactor = interactor
