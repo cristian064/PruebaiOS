@@ -8,14 +8,14 @@
 import Foundation
 @testable import PruebaiOS
 
-class ListPresenterRouterMock: ListPresenterRouterProtocol {
-    func presentError() {
-        
-    }
-    
-    func pushDetail(with data: DataModel) {
-        
-    }
-    
-    
-}
+//class ListPresenterRouterMock: ListPresenterRouterProtocol {
+//    func presentError() {
+//        
+//    }
+//    
+//    func pushDetail(with data: DataModel) {
+//        
+//    }
+//    
+//    
+//}

@@ -7,14 +7,14 @@
 
 import Foundation
 
-class ListPresenter: ListViewPresenterProtocol, ListInteractorPresenterProtocol {
-    var interactor: ListPresenterInteractorProtocol
-    weak var view: ListPresenterViewProtocol?
+class ListPresenter: ListPresenterProtocol {
+    var interactor: ListInteractorProtocol
+    weak var view: ListViewProtocol?
     var router: ListPresenterRouterProtocol
     var title: String = Localized.List.title
     var elements: [DataModel] = []
     init(router: ListPresenterRouterProtocol,
-         interactor: ListPresenterInteractorProtocol) {
+         interactor: ListInteractorProtocol) {
         self.router = router
         self.interactor = interactor
     }

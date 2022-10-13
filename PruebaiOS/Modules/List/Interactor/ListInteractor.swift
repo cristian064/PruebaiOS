@@ -7,9 +7,9 @@
 
 import Foundation
 
-class ListInteractor: ListPresenterInteractorProtocol{
+class ListInteractor: ListInteractorProtocol{
     let repository: GoRestRepositoryProtocol = GoRestRepository()
-    weak var presenter: ListInteractorPresenterProtocol?
+    weak var presenter: ListPresenterProtocol?
     var requestData = RequestModel(pageNumber: 1, pageSize: 10, totalPage: 1, text: .empty)
     var isLoadingMoreData: Bool = false
     func getData() {

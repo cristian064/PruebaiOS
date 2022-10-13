@@ -8,14 +8,14 @@
 import Foundation
 @testable import PruebaiOS
 
-class ListPresenterViewMock: ListPresenterViewProtocol {
-    func didReceiveData() {
-        
-    }
-    
-    func loading(with isLoading: Bool) {
-        
-    }
-    
-    
-}
+//class ListPresenterViewMock: ListPresenterViewProtocol {
+//    func didReceiveData() {
+//        
+//    }
+//    
+//    func loading(with isLoading: Bool) {
+//        
+//    }
+//    
+//    
+//}

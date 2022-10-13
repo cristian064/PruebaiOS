@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ListViewPresenterProtocol: AnyObject {
+protocol ListPresenterProtocol: AnyObject {
     var title: String { get }
     var elements: [DataModel] {get}
     func viewDidLoad()
@@ -15,20 +15,18 @@ protocol ListViewPresenterProtocol: AnyObject {
     func search(with title: String)
     func willDisplay(indexPath: IndexPath)
     func didSelect(at index: Int)
+    func didReceiveError()
+    func didReceiveData(dataModel: ListModel)
+
 }
 
-protocol ListPresenterViewProtocol: AnyObject {
+protocol ListViewProtocol: AnyObject {
     func didReceiveData()
     func loading(with isLoading: Bool)
 }
 
 
-protocol ListInteractorPresenterProtocol: AnyObject {
-    func didReceiveError()
-    func didReceiveData(dataModel: ListModel)
-}
-
-protocol ListPresenterInteractorProtocol: AnyObject {
+protocol ListInteractorProtocol: AnyObject {
     func getData()
     var requestData: RequestModel {get set}
 }

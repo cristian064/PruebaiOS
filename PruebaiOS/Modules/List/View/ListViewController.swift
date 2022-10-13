@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class ListViewController: UIViewController {
-    let presenter: ListViewPresenterProtocol
+    let presenter: ListPresenterProtocol
     var refreshControl: UIRefreshControl = .init(frame: .zero)
     var searchTimer : Timer?
     
@@ -30,7 +30,7 @@ class ListViewController: UIViewController {
         return UICollectionView(frame: .zero, collectionViewLayout: compositionLayout)
     }()
     private let searchController = UISearchController(searchResultsController: nil)
-    init(presenter: ListViewPresenterProtocol) {
+    init(presenter: ListPresenterProtocol) {
         self.presenter = presenter
         super.init(nibName: nil, bundle: nil)
     }
@@ -116,7 +116,7 @@ extension ListViewController: UICollectionViewDataSourcePrefetching {
     }
 }
 
-extension ListViewController: ListPresenterViewProtocol {
+extension ListViewController: ListViewProtocol {
     func didReceiveData() {
         self.collectionView.reloadData()
     }
