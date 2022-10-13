@@ -27,8 +27,7 @@ protocol ListViewProtocol: AnyObject {
 
 
 protocol ListInteractorProtocol: AnyObject {
-    func getData()
-    var requestData: RequestModel {get set}
+    func getData(requestData: RequestModel)
 }
 
 protocol ListPresenterRouterProtocol: AnyObject {

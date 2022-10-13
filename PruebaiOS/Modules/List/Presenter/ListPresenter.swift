@@ -13,6 +13,7 @@ class ListPresenter: ListPresenterProtocol {
     var router: ListPresenterRouterProtocol
     var title: String = Localized.List.title
     var elements: [DataModel] = []
+    var requestData = RequestModel(pageNumber: 1, pageSize: 10, totalPage: 1, text: .empty)
     init(router: ListPresenterRouterProtocol,
          interactor: ListInteractorProtocol) {
         self.router = router
@@ -24,7 +25,7 @@ class ListPresenter: ListPresenterProtocol {
     }
     
     func getData() {
-        interactor.getData()
+        interactor.getData(requestData: requestData)
     }
     
     func didReceiveError() {
@@ -33,6 +34,10 @@ class ListPresenter: ListPresenterProtocol {
     }
     
     func didReceiveData(dataModel: ListModel) {
+        requestData.pageSize = dataModel.pagination.pageSize
+        requestData.pageNumber = dataModel.pagination.pageNumber
+        requestData.totalPage = dataModel.pagination.totalPage
+        
         if dataModel.pagination.pageNumber == 1 {
             self.elements = dataModel.data
         } else {
@@ -43,9 +48,9 @@ class ListPresenter: ListPresenterProtocol {
     }
     
     func search(with title: String) {
-        interactor.requestData.text = title
-        interactor.requestData.pageNumber = 1
-        interactor.getData()
+        requestData.text = title
+        requestData.pageNumber = 1
+        interactor.getData(requestData: requestData)
     }
     
     func willDisplay(indexPath: IndexPath) {
@@ -55,15 +60,14 @@ class ListPresenter: ListPresenterProtocol {
     }
     
     func initialLoadData() {
-        interactor.requestData.pageNumber = 1
-        interactor.getData()
+        requestData.pageNumber = 1
+        interactor.getData(requestData: requestData)
     }
     
     func loadMoreData() {
-        let pageNumber = (elements.count / interactor.requestData.pageSize).increment()
-        if pageNumber <= interactor.requestData.totalPage {
-            interactor.requestData.pageNumber = pageNumber
-            interactor.getData()
+        if requestData.pageNumber < requestData.totalPage {
+            requestData.pageNumber += 1
+            interactor.getData(requestData: requestData)
         }
     }
     

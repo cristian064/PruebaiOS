@@ -10,9 +10,9 @@ import Foundation
 class ListInteractor: ListInteractorProtocol{
     let repository: GoRestRepositoryProtocol = GoRestRepository()
     weak var presenter: ListPresenterProtocol?
-    var requestData = RequestModel(pageNumber: 1, pageSize: 10, totalPage: 1, text: .empty)
+    
     var isLoadingMoreData: Bool = false
-    func getData() {
+    func getData(requestData: RequestModel) {
         guard !isLoadingMoreData else {return}
         isLoadingMoreData = true
         repository.getGoRestData(request: requestData) {[weak self] response in
@@ -33,15 +33,7 @@ class ListInteractor: ListInteractorProtocol{
     }
     
     func setupData(listModel: ListModel) {
-        setupPagination(paginationModel: listModel.pagination)
         self.presenter?.didReceiveData(dataModel: listModel)
-
-    }
-    
-    func setupPagination(paginationModel: PaginationModel) {
-        requestData.pageSize = paginationModel.pageSize
-        requestData.pageNumber = paginationModel.pageNumber
-        requestData.totalPage = paginationModel.totalPage
     }
     
     func mapDataModel(data: ListEntity) -> ListModel {
